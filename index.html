@@ -8,20 +8,49 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #FFE0E6; /* light pink background color */
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #mainText {
+            margin-bottom: 20px;
         }
         #additionalText {
             display: none;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #FF69B4; /* pink button color */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #FF1493; /* darker pink button color on hover */
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <div id="mainText">
-        <p>This is some initial text that appears on the page.</p>
-        <button onclick="revealText()">Click to reveal more</button>
-    </div>
-    <div id="additionalText">
-        <p>This is some additional text that appears after clicking the button.</p>
+    <div id="container">
+        <h1>Welcome to My Website</h1>
+        <div id="mainText">
+            <p>This is some initial text that appears on the page.</p>
+            <button onclick="revealText()">Click to reveal more</button>
+        </div>
+        <div id="additionalText">
+            <p>This is some additional text that appears after clicking the button.</p>
+        </div>
     </div>
 
     <script>
